@@ -1,0 +1,270 @@
+
+
+.chart-block {
+	float: right;
+	width: 398px;
+	height: 514px;
+	margin-bottom: $margin;
+}
+
+.player {
+	height: 205px;
+}
+
+.player__left {
+	width: 170px;
+	text-align: center;
+	position: relative;
+	float: left;
+	left: -3px;
+	top: -2px;
+}
+
+.player__pause {
+	position: absolute;
+	top: 43px;
+	left: 67px;
+	width: 38px;
+	height: 42px;
+	cursor: pointer;
+}
+
+.player__pause:before,
+.player__pause:after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 13px;
+	background-color: $yellow;
+	top: 0;
+	left: 0;
+	border-radius: 8px;
+}
+
+.player__pause:after {
+	left: auto;
+	right: 0;
+}
+
+.player__time {
+	color: $white;
+	font-size: 30px;
+//	width: 171px;
+	position: absolute;
+	top: 99px;
+	left: 58px;
+	font-weight: bold;
+}
+
+.player__right {
+	width: 190px;
+	float: right;
+	height: 100%;
+	color: white;
+	box-sizing: border-box;
+	padding: 29px 0px;
+}
+
+.player__song {
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: -0.05em;
+	margin-bottom: 3px;
+}
+
+.player__title {
+	text-transform: uppercase;
+	font-family: $font;
+	font-weight: bold;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.player__controls {
+	margin-top: 25px;
+	height: 30px;
+	position: relative;
+}
+
+.player__mute {
+	float: left;
+	width: 30px;
+	height: 30px;
+	background: url(../img/sprite.png) no-repeat -10px -914px;
+	cursor: pointer;
+}
+
+.player__options {
+	width: 30px;
+	height: 30px;
+	float: right;
+	background: url(../img/sprite.png) no-repeat -10px -964px;
+	cursor: pointer;
+}
+
+.player__volume {
+	position: absolute;
+	margin: 0 30px 0 37px;
+	width: 94px;
+	cursor: pointer;
+	padding: 14px 0;
+}
+
+.player__scale {
+	height: 2px;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.player__bar {
+	height: 2px;
+	background-color: $white;
+	width: 68px;
+	position: relative;
+}
+
+.player__bar:after {
+	content: '';
+	position: absolute;
+	right: -4px;
+	top: -3px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #fff;
+	
+}
+
+.chart {
+	height: 308px;
+//	background-color: $bg_white;
+	box-shadow: $shadow_block;
+}
+
+.chart__graph-block {
+	color: white;
+//	padding: 20px 23px;
+	box-sizing: border-box;
+	height: 237px;
+	position: relative;
+	overflow: hidden;
+}
+
+//заливка полосками для графика
+.highcharts-series :first-child {
+	fill: url(../index.html#img1) !important;
+}
+
+/*			Стиль для шарика на графике*/
+.highcharts-tooltip > span {
+	margin-top: 5px !important;
+	padding-top: 6px;
+	width: 56px;
+	height: 71px;
+	box-sizing: border-box;
+	position: relative;
+	background: url(../img/sprite.png) no-repeat -10px -1014px;
+	text-align: center;
+}
+/*			Цифра рейтинга*/
+.highcharts-tooltip b {
+	color: white;
+	font-size: 22px;
+}
+
+.chart__title {
+	font-weight: bold;
+	font-size: 17px;
+	font-family: $font;
+	position: absolute;
+	z-index: 1;
+	top: 18px;
+	left: 20px;
+}
+
+.chart__year {
+	z-index: 1;
+	position: absolute;
+	font-size: 12px;
+	letter-spacing: 0.1em;
+	color: rgba(255, 210, 243, 0.7);
+	top: 42px;
+	left: 22px;
+}
+
+.chart__artist-block {
+	height: 71px;
+	background-color: #fff;
+//	line-height: 71px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.chart__arrow {
+	width: 51px;
+//	float: left;
+//	clear: both;
+	height: 35px;
+	background: $yellow url(../img/sprite.png) no-repeat 5px -1170px;
+	cursor: pointer;
+}
+
+.chart__arrow_down {
+	border-top: 1px solid #ebba43;
+	background-position: 5px -1137px;
+}
+
+
+.chart__artist {
+	float: left;
+	height: 100%;
+	width: 176px;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+	color: $purple;
+	font-size: 30px;
+	letter-spacing: -0.05em;
+	box-sizing: border-box;
+	padding-top: 21px;
+	font-weight: bold;
+}
+
+.chart__place {
+	box-sizing: border-box;
+	float: right;
+	height: 100%;
+	color: $brown;
+	width: 170px;
+	line-height: 1em;
+	text-align: left;
+//	padding-left: 87px;
+	position: relative;
+	font-size: 32px;
+	font-weight: bold;
+	padding-left: 25px;
+	padding-top: 17px;
+}
+
+.chart__number {
+	font-size: 47px;
+	position: relative;
+	top: 4px;
+}
+
+
+.chart__position {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 11px;
+	line-height: 14px;
+	text-align: left;
+	width: 80px;
+	padding-top: 23px;
+	text-transform: uppercase;
+	letter-spacing: 0.07em;
+	font-weight: bold;
+}
+
+
+
+.chart__arrow-block {
+	float: left;
+}

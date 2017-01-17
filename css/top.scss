@@ -1,0 +1,156 @@
+
+.top {
+	float: left;
+	width: 441px;
+	margin-right: $margin;
+	margin-bottom: $margin;
+	min-height: 395px;
+	box-shadow: $shadow_block;
+}
+
+.top__numbers {
+	float: left;
+}
+
+.top__number {
+	height: 108px;
+	border-bottom: 1px solid rgba(100, 100, 100, 0.3); 
+	background-color: rgba(100, 100, 100, 0.2);
+	width: 71px;
+//	float: left;
+	color: white;
+	text-align: center;
+	line-height: 107px;
+	font-size: 24px;
+	font-weight: bold;
+	box-sizing: border-box;
+}
+
+.top__artist-block {
+	float: right;
+}
+
+.top__artist-card {
+	height: 108px;
+	width: 370px;
+//	float: right;
+	background-color: #fff;
+	border-bottom: 1px solid #f5f1ee;
+	box-sizing: border-box;
+	padding-left: 110px;
+	color: $brown;
+	padding-top: 30px;
+	position: relative;
+	background: #fff url(../img/top__artist_card1.jpg) no-repeat 23px center;
+}
+
+.top__artist-card_2 {
+	background-image: url(../img/top__artist_card2.jpg);
+}
+
+.top__artist-card_3 {
+	background-image: url(../img/top__artist_card3.jpg);
+}
+
+.top__title {
+	font-size: 28px;
+	font-weight: bold;
+	letter-spacing: -0.08em;
+	
+}
+
+.top__name {
+	color: $lightblue;
+	font-size: 14px;
+	font-family: $font;
+	padding-left: 3px;
+}
+
+.top__like {
+	position: absolute;
+	right: 40px;
+	top: 47px;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: $font;
+	color: #ce6294;
+}
+
+.top__like:after {
+	transition: transform 0.3s ease-in-out;
+	background:url(../img/sprite.png) no-repeat -10px -1354px;
+	content: '';
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: -3px;
+	right: -23px;
+	transform: scale(0.7);
+}
+
+.top__like:hover:after {
+	background-position: -10px -1379px;
+	transform: scale(1);
+	
+}
+
+.top__footer {
+	clear: both;
+	height: 71px;
+	text-align: center;
+	font-size: 18px;
+	background: $yellow url(../img/top__footer.png) no-repeat;
+}
+
+.top__button {
+	float: left;
+	width: 113px;
+	height: 100%;
+	box-sizing: border-box;
+	padding-top: 27px;
+	color: white;
+	font-weight: bold;
+	font-family: $font;
+	font-size: 18px;
+	letter-spacing: -0.05em;
+	position: relative;
+	cursor: pointer;
+	border: none;
+	background-color: $yellow;
+	
+	&:hover,
+	&.top__button_active {
+	background-color: $gold;
+	box-shadow: inset 0 10px 10px -5px rgba(0,0,0, 0.3);
+	}
+}
+
+.top__button:before {
+	content: '';
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	background:url(../img/sprite.png) no-repeat -10px -1284px;
+//	outline: 1px solid;
+	top: 14px;
+	left: 45px;
+}
+
+.top__button_videos {
+	margin-left: 215px;
+	text-decoration: none;
+	
+	&.top__button_active:before {
+		background-position: -10px -1309px;
+	}
+}
+
+.top__button_music {
+	&:before  {
+		background-position: -10px -1216px;
+	}
+	
+	&.top__button_active:before {
+		background-position: -10px -1241px;
+	}
+}

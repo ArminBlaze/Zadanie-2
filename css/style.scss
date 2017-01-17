@@ -1,0 +1,60 @@
+$margin: 47px;
+$purple: #5d3b5f;
+$brown: #aa5a5f;
+$yellow: #f3d058;
+$gold: #dba828;
+$blue: #5f57a0;
+$lightblue: #8a82bb;
+$shadow_block: 0 2px 2px rgba(0,0,0, 0.2);
+$shadow_bottom: 0 5px 10px rgba(0,0,0, 0.3);
+$shadow_right: 4px 0 10px rgba(0,0,0, 0.3);
+$white: #fff;
+$font: 'Ubuntu', sans-serif;
+$font2: 'Ubuntu Condensed', sans-serif;
+$bg_white: rgba(255, 255, 255, 0.2);
+$bg_white_hover: rgba(175, 175, 175, 0.1);
+$bg_white_active: rgba(150, 150, 150, 0.1);
+@mixin bg_white {
+	background-color: $bg_white;
+	cursor: pointer;
+	text-shadow: 1px 1px 0px #999;
+	
+	&:hover {
+		background-color: $bg_white_hover;
+	}
+	
+	&:active {
+		background-color: $bg_white_active;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #ff727e url(../img/bg8.jpg) repeat-y;
+	background-size: cover;
+	min-height: 1800px;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+
+.container {
+	width: 1114px;
+	margin: 0 auto;
+//	outline: 1px solid dodgerblue;
+}
+
+.sprite {
+	background-image: url(../img/sprite.png);
+	background-repeat: no-repeat;
+}
+
+@import "popular";
+@import "calendar";
+@import "artist";
+@import "buy";
+@import "chart";
+@import "top";
+@import "video";
+
+

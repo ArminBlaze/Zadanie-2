@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+	<meta charset='UTF-8'>
+	<title>Music Site</title>
+	<style>
+		.parent {
+			width: 500px;
+			height: 620px;
+			background-image: url(img/1429722935_875247875.png);
+			background-position: bottom;
+			background-size: cover;
+			position: relative;
+/*			filter: blur(5px);*/
+			overflow: hidden;
+		}
+		
+		.parent:before {
+			position: absolute;
+			content: "";
+			background: inherit;
+			-webkit-filter: blur(5px);
+			filter: blur(5px);
+			bottom: 0;
+			width: 100%;
+			height: 100px;
+			overflow: hidden;
+		}
+		
+		.children {
+			width: 100%;
+			height: 100px;
+			bottom: 0;
+			position: absolute;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class='parent'>
+		<div class='children'>
+			<H3>Этот текст не должен блюрится</H3>
+		</div>
+	</div>
+</body>
+</html>

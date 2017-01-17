@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Circle Progress</title>
+	<style>
+		body {
+			background-color: darkred;
+		}
+	</style>
+</head>
+<body>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="jquery-circle-progress/dist/circle-progress.js"></script>
+
+<div id="circle"></div>
+<div class="fifth circle"></div>
+
+<script>
+    $('#circle').circleProgress({
+        value: 0.9,
+        size: 80,
+				startAngle: -Math.PI / -2,
+        fill: {
+             gradient: ["rgba(255, 255, 255, 0.1)",  "rgba(255, 255, 255, 0.9)"], 
+					gradientAngle: Math.PI / 5
+        },
+			emptyFill: "rgba(255, 255, 255, .1)"
+    });
+	
+	$('.fifth.circle').circleProgress({
+    value: 0.7,
+		startAngle: -Math.PI / -2,
+		fill: {
+            color: 'rgba(0, 0, 0, .3)',
+            image: "img/player.png"
+        }
+});
+</script>
+
+</body>
+</html>

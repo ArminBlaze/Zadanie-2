@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+<style>
+	body {
+		background-color: palevioletred;
+	}	
+
+</style>
+	<script type="text/javascript">
+	window.onload = function () {
+		var chart = new CanvasJS.Chart("chartContainer",
+		{
+			backgroundColor: "transparent",
+			title:{
+				text: "Music Album Sales by Year"
+			},  
+                        animationEnabled: true,  
+			axisY: {
+				title: "Units Sold",
+				valueFormatString: "#0,,.",
+				suffix: " m"
+			},
+			data: [
+			{        
+				toolTipContent: "{y} units",
+				type: "splineArea",
+				markerSize: 5,
+				color: "rgba(255,255,255,.5)",
+				dataPoints: [
+				{x: new Date(1992,0), y: 2506000},     
+				{x: new Date(1993,0), y: 2798000},     
+				{x: new Date(1994,0), y: 3386000},     
+				{x: new Date(1995,0), y: 6944000},     
+				{x: new Date(1996,0), y: 6026000},     
+				{x: new Date(1997,0), y: 2394000},     
+				{x: new Date(1998,0), y: 1872000},     
+				{x: new Date(1999,0), y: 2140000},     
+				{x: new Date(2000,0), y: 7289000},     
+				{x: new Date(2001,0), y: 4830000},     
+				{x: new Date(2002,0), y: 2009000},     
+				{x: new Date(2003,0), y: 2840000},     
+				{x: new Date(2004,0), y: 2396000},     
+				{x: new Date(2005,0), y: 1613000},     
+				{x: new Date(2006,0), y: 2821000},     
+				{x: new Date(2007,0), y: 2000000},     
+				{x: new Date(2008,0), y: 1397000}    
+				]
+			}             
+			]
+		});
+
+chart.render();
+}
+</script>
+<script type="text/javascript" src="script/canvasjs.min.js"></script>
+</head>
+<body>
+	<div id="chartContainer" style="height: 300px; width: 100%;">
+	</div>
+</body>
+
+</html>

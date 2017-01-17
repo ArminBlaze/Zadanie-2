@@ -1,0 +1,226 @@
+.popular {
+	margin-top: 149px;
+	height: 378px;
+	font-size: 0;
+	box-shadow: $shadow_block;
+	overflow: hidden;
+	margin-bottom: $margin;
+}
+
+.popular__artist {
+	display: inline-block;
+	vertical-align: top;
+	width: 367px;
+	height: 100%;
+	background: white;
+	padding: 0 55px 0 57px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.popular__artist:after {
+	content: '';
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	top: 61px;
+	right: -9px;
+	transform: rotate(45deg);
+	background-color: #fff;
+}
+
+
+.popular__header {
+	font-size: 53px;
+	margin: 0;
+	margin-top: 35px;
+	letter-spacing: -0.05em;
+	color: $purple;
+	text-indent: -3px;
+	
+}
+
+.popular__title {
+	font-size: 20px;
+	text-transform: uppercase;
+	color: $brown;
+}
+
+.popular__description {
+	margin-top: 35px;
+	margin-bottom: 54px;
+	font-size: 14px;
+	line-height: 1.75em;
+	letter-spacing: 0.04em;
+}
+
+.popular__read-more {
+	font-size: 13px;
+	min-height: 21px;
+	line-height: 21px;
+	font-weight: bold;
+	color: $gold;
+	text-decoration: none;
+	letter-spacing: 0.1em;
+	position: relative;
+}
+
+.popular__read-more:after {
+	content: '';
+	display: inline-block;
+	vertical-align: top;
+	width: 21px;
+	height: 21px;
+	background: url(../img/sprite.png) no-repeat -10px -10px;
+	margin-left: 10px;
+}
+
+.popular__icons {
+	float: right;
+}
+
+.popular__icon {
+	margin-left: 15px;
+	cursor: pointer;
+}
+
+.popular__icon {
+	display: inline-block;
+	vertical-align: top;
+	background: url(../img/sprite.png) no-repeat -10px -114px;
+	width: 21px;
+	height: 21px;
+}
+
+.popular__icon_like {
+//	background-image: url(../img/popular__refresh.png);
+	background-position: -7px -80px;
+}
+
+.popular__icon_comment {
+//	background-image: url(../img/popular__comment.png);
+	background-position: -5px -45px;
+}
+
+.popular__foto {
+	height: 100%;
+	background: url(../img/woman_1s.jpg) no-repeat 51% -3px;
+	display: inline-block;
+	vertical-align: top;
+	width: 487px;
+	box-shadow: 5px 0 10px rgba(0,0,0, 0.4);
+}
+
+
+//	Стили для слайдера Jspane
+
+
+
+//Ширина области прокрутки, без этого список будет шириной до полосы прокрутки
+.jspPane
+{
+	position: absolute;
+	width: 100% !important;
+}
+
+//Ширина слайдера
+.scroll-pane {
+	width: 260px;
+	height: 100%;
+	height: 378px;
+	overflow: auto;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.horizontal-only {
+	height: auto;
+	max-height: 200px;
+}
+
+//Ширина области прокрутки, по которой ездит полоска
+.jspVerticalBar
+{
+	position: absolute;
+	top: 0;
+	right: 0px;
+	width: 13px;
+	height: 100%;
+}
+
+//Полоса прокрутки
+.jspDrag
+{
+	background: #ba4e7f;
+	position: relative;
+	width: 4px;
+	top: 0;
+	left: 4px;
+	cursor: pointer;
+	border-radius: 3px;
+	height: 102px !important;
+}
+
+//Конец стилей Jspane
+
+
+//Продолжение стилей страницы
+
+
+.popular__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+
+
+.popular__item {
+	box-sizing: border-box;
+	color: white;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 13px;
+//	border-bottom: 1px solid #e08b84;
+	box-shadow: -10px 1px 0 #e08b84;
+	font-family: sans-serif;
+	position: relative;
+	font-size: 16px;
+	@include bg_white;
+}
+
+
+
+.popular__item:before {
+	font-family: Arial, sans-serif;
+	content: '▶';
+	display: inline-block;
+	vertical-align: top;
+	width: 10px;
+	height: 10px;
+	margin-right: 5px;
+	margin-top: -1px;
+	font-size: 10px;
+	transform: scaleX(0.7);
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.popular__item_selected {
+	background-color: rgba(150, 150, 150, 0.1);
+	box-shadow: 
+		inset -1px -2px 0 -1px rgba(0,0,0, 0.1),
+		inset -1px 2px rgba(0,0,0, 0.1);
+	
+	&:hover {
+	background-color: rgba(150, 150, 150, 0.1);
+		
+	}
+}
+
+.popular__item_selected:before {
+	font-size: 22px;
+	width: 20px;
+	color: gold;
+	transform: scaleX(0.8);
+}

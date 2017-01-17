@@ -1,0 +1,113 @@
+
+
+
+.buy {
+	float: left;
+	width: 181px;
+	height: 514px;
+	margin-bottom: $margin;
+	margin-right: $margin;
+	overflow: hidden;
+	background-color: #fff;
+	box-shadow: $shadow_block;
+}
+
+.buy__description {
+	height: 278px;
+	text-align: left;
+	box-sizing: border-box;
+	border-top: 7px solid $blue;
+	padding-left: 31px;
+	background: #fff url(../img/buy_description.png) no-repeat 85% 65%;
+	box-shadow: 0 3px 10px rgba(0,0,0, 0.2);
+}
+
+.buy__header {
+	color: $brown;
+	font-size: 36px;
+	font-weight: bold;
+	letter-spacing: -0.05em;
+	margin-top: 25px;
+}
+
+.buy__title {
+	color: $brown;
+	font-size: 9px;
+	text-transform: uppercase;
+	letter-spacing: 0.25em;
+}
+
+.buy__list {
+	margin-top: 40px;
+	list-style-type: none;
+	padding: 0;
+	text-align: left;
+	font-size: 15px;
+}
+
+.buy__item {
+	margin-bottom: 11px;
+	padding-left: 17px;
+	position: relative;
+}
+
+.buy__item:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 4px;
+	width: 8px;
+	height: 8px;
+	background-color: $yellow;
+	border-radius: 50%;
+}
+
+.buy__price-block {
+	height: 165px;
+//	background-color: #fff;
+	font-family: $font;
+	color: $blue;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 10px;
+	box-shadow: $shadow_bottom;
+	position: relative;
+	z-index: 1;
+}
+
+.buy__price {
+	font-size: 52px;
+//	display: table;
+}
+
+.buy_number {
+	position: relative;
+	top: 5px;
+	left: 5px;
+	font-size: 100px;
+	line-height: 100px;
+	font-weight: bold;
+}
+
+.buy__month {
+	color: $brown;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: bold;
+	font-family: $font;
+	letter-spacing: 0.07em;
+	padding-left: 5px;
+	margin-top: 8px;
+}
+
+.buy__button {
+	height: 71px;
+	width: 100%;
+	border:none;
+	background: $lightblue url(../img/buy__button.png) no-repeat -12% 3px;
+	color: white;
+	font-size: 40px;
+	font-family: $font2;
+	padding-left: 15px;
+	cursor: pointer;
+}

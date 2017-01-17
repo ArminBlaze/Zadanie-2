@@ -1,0 +1,255 @@
+
+.video {
+	float: left;
+	width: 626px;
+	margin-bottom: $margin;
+	min-height: 395px;
+	box-shadow: $shadow_block;
+}
+
+.video, .video__pause, .fullscreenbtn, .video__mute, .video__time, .video__time-total, .video__seek, .video__volume {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+	outline: none;
+	color: white;
+}
+
+.video {
+  position: relative;
+	width: 626px;
+	height: 395px;
+	background-color: transparent;
+}
+
+.video__controls {
+  position: absolute;
+  background: rgba(0,0,0, 0.3);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+	box-sizing: border-box;
+  height: 71px;
+	line-height: 71px;
+/*  padding-top: 26px;*/
+  padding-left: 12px;
+	font-size: 0;
+	
+	
+  opacity: 1;
+  -webkit-transition: opacity .3s;
+  -moz-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  -ms-transition: opacity .3s;
+  transition: opacity .3s;
+	
+}
+
+$blur: 7px;
+$blur-height: 100px;
+
+.artist__foto {
+	height: 443px;
+//	background-image: url(../img/artist__foto.jpg);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+//	z-index: 1;
+	background-position:bottom;
+	box-shadow:
+		0 5px 10px rgba(0,0,0, 0.4),
+		4px 0 10px rgba(0,0,0, 0.3);
+	position: relative;
+	z-index: 1;
+}
+
+
+//блок с блюром немного шире, чтобы убрать слабый блюр по краям. Левую, правую и нижнюю границу обрежет родитель. Верхнюю следующий псевдоэлемент.
+.artist__foto:before {
+	width: calc(100% + #{$blur*2});
+	height: $blur-height + $blur*2;
+	margin-left: -$blur;
+	bottom: -10px;
+	position: absolute;
+	content: "";
+	background-image: url(../img/artist__foto.jpg);
+	background-position: bottom;
+	filter: blur($blur);
+//	background-color: rgba(0, 0, 0, 1);
+//	filter: blur($blur) brightness(50%);
+	background-position:center bottom + " " +($blur);
+}
+
+//обрезает верхний край блока с блюром, делая чёткие границы, накладывая сверху фон
+.artist__foto:after {
+	position: absolute;
+	content: "";
+	top: 0;
+	bottom: $blur-height;
+	overflow: hidden;
+	width: 100%;
+	background-image: url(../img/artist__foto.jpg);
+	background-size: 100% auto;
+	background-position:left 0 bottom + " " +(-($blur-height));
+}
+
+.artist__blur {
+	box-sizing: border-box;
+	width: 100%;
+	height: $blur-height;
+	bottom: 0;
+	position: absolute;
+	padding-top: 15px + $blur;
+	padding-left: 25px;
+	background-color: rgba(0, 0, 0, 0.5);
+	
+}
+
+.video__pause {
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMThweCIgaGVpZ2h0PSIxOHB4IiB2aWV3Qm94PSI5MSA5MSAxOCAxOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyA5MSA5MSAxOCAxOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBvcGFjaXR5PSIwLjk1IiBmaWxsPSIjRkZGRkZGIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICIgZD0iTTkzLjI1OCw5MS4yMzlsMTQuNjkyLDcuNjgxYzEuMTQxLDAuNTk2LDEuMTQxLDEuNTYzLDAsMi4xNTkNCgkJbC0xNC42OTIsNy42ODNjLTEuMTQsMC41OTctMi4wNjQsMC4wMzctMi4wNjQtMS4yNDhWOTIuNDg3QzkxLjE5NCw5MS4yMDIsOTIuMTE4LDkwLjY0Myw5My4yNTgsOTEuMjM5eiIvPg0KPC9nPg0KPC9zdmc+DQo=);
+  background-size: 20px;
+  background-repeat: no-repeat;
+	background-position: center;
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  border: 0;
+    display:inline-block;
+    vertical-align:middle;
+	margin-right: 20px;
+}
+
+.video__pause:hover {
+  cursor: pointer;
+}
+
+.fullscreenbtn {
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMThweCIgaGVpZ2h0PSIxOHB4IiB2aWV3Qm94PSIwIDAgMTggMTgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE4IDE4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIG9wYWNpdHk9IjAuOTUiPg0KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNy41LDEyLjU1MWMwLDAuMzg1LTAuMzE0LDAuNjk5LTAuNjk5LDAuNjk5aC0xLjM5MmMtMC4zODUsMC0wLjQ3NywwLjIyMy0wLjIwNCwwLjQ5M2wxLjgxMSwxLjgwNA0KCQljMC4yNzIsMC4yNzEsMC4yNzIsMC43MTcsMC4wMDIsMC45ODlsLTAuNTA3LDAuNTFjLTAuMjcxLDAuMjczLTAuNzE0LDAuMjczLTAuOTg1LDBsLTEuNzgzLTEuNzk3DQoJCWMtMC4yNzEtMC4yNzMtMC40OTItMC4xODMtMC40OTIsMC4yMDJ2MS4zNWMwLDAuMzg1LTAuMzE0LDAuNjk5LTAuNjk5LDAuNjk5aC0wLjcyNmMtMC4zODYsMC0wLjctMC4zMTQtMC43LTAuNjk5di00Ljk3Ng0KCQljMC0wLjM4NiwwLjMxNC0wLjcsMC43LTAuN2g0Ljk3NmMwLjM4NSwwLDAuNjk5LDAuMzE0LDAuNjk5LDAuN1YxMi41NTF6IE0wLjUsMTIuNTUxYzAsMC4zODUsMC4zMTQsMC42OTksMC42OTksMC42OTloMS4zNQ0KCQljMC4zODUsMCwwLjQ3NiwwLjIyMywwLjIwNSwwLjQ5NGwtMS44MDEsMS44MDNjLTAuMjcyLDAuMjcxLTAuMjcyLDAuNzE3LDAsMC45ODhsMC41MTQsMC41MTRjMC4yNzEsMC4yNzIsMC43MTcsMC4yNzIsMC45ODgsMA0KCQlsMS44MDEtMS44MDFjMC4yNzItMC4yNzIsMC40OTUtMC4xOCwwLjQ5NSwwLjIwNXYxLjM0OGMwLDAuMzg1LDAuMzE0LDAuNjk5LDAuNjk5LDAuNjk5aDAuNzI2YzAuMzg1LDAsMC43LTAuMzE0LDAuNy0wLjY5OXYtNC45NzYNCgkJYzAtMC4zODYtMC4zMTQtMC43LTAuNy0wLjdIMS4xOTljLTAuMzg1LDAtMC42OTksMC4zMTQtMC42OTksMC43VjEyLjU1MXogTTE3LjUsNS40NDljMC0wLjM4NS0wLjMxNC0wLjY5OS0wLjY5OS0wLjY5OWgtMS4zOTINCgkJYy0wLjM4NSwwLTAuNDc2LTAuMjIyLTAuMjAyLTAuNDkybDEuODA2LTEuNzg0YzAuMjczLTAuMjcxLDAuMjc0LTAuNzE0LDAuMDAxLTAuOTg0bC0wLjUtMC40OTcNCgkJYy0wLjI3Mi0wLjI3MS0wLjcxNy0wLjI2OS0wLjk4OCwwLjAwNGwtMS43ODMsMS43OTdDMTMuNDcyLDMuMDY3LDEzLjI1LDIuOTc2LDEzLjI1LDIuNTlWMS4xOTljMC0wLjM4NS0wLjMxNC0wLjY5OS0wLjY5OS0wLjY5OQ0KCQloLTAuNzI2Yy0wLjM4NiwwLTAuNywwLjMxNC0wLjcsMC42OTl2NC45NzZjMCwwLjM4NSwwLjMxNCwwLjcsMC43LDAuN2g0Ljk3NmMwLjM4NSwwLDAuNjk5LTAuMzE0LDAuNjk5LTAuN1Y1LjQ0OXogTTAuNSw2LjE3NQ0KCQljMCwwLjM4NSwwLjMxNCwwLjcsMC42OTksMC43aDQuOTc2YzAuMzg1LDAsMC43LTAuMzE0LDAuNy0wLjdWMS4xOTljMC0wLjM4NS0wLjMxNC0wLjY5OS0wLjctMC42OTlINS40NDkNCgkJQzUuMDY0LDAuNSw0Ljc1LDAuODE0LDQuNzUsMS4xOTlWMi41OWMwLDAuMzg1LTAuMjIyLDAuNDc4LTAuNDk1LDAuMjA1bC0xLjgwMS0xLjhDMi4xODMsMC43MjIsMS43MzYsMC43MjEsMS40NjIsMC45OTENCgkJbC0wLjUwNywwLjVjLTAuMjczLDAuMjctMC4yNzQsMC43MTMtMC4wMDEsMC45ODNsMS43OTgsMS43ODRDMy4wMjQsNC41MjgsMi45MzQsNC43NSwyLjU0OSw0Ljc1aC0xLjM1DQoJCUMwLjgxNCw0Ljc1LDAuNSw1LjA2NCwwLjUsNS40NDlWNi4xNzV6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 7%;
+  height: 20px;
+  cursor: pointer;
+  border: 0;
+/*  background-color: blue;*/
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.video__time, 
+.video__time-total {
+  width: 5%;
+  display: inline-block;
+  vertical-align: middle;
+	font-weight: bold;
+	font-size: 1rem;
+}
+		
+.video__time::-moz-selection,
+.video__time-total::-moz-selection {
+			background-color: transparent;
+}
+		
+.video__time::selection,
+		.video__time-total::selection {
+			background-color: transparent;
+}
+
+.video__time {
+	margin-right: 17px;
+}
+
+.video__seek,
+.video__volume {
+  background: transparent;
+	height: 20px;
+  display:inline-block;
+  vertical-align:middle;
+	margin-right: 15px;
+	cursor: pointer;
+	padding: 14px 0;
+}
+
+.video__seek {
+  width: 258px;
+}
+		
+.video__volume {
+  width: 93px;
+}
+
+.video__scale,
+.video__soundScale {
+	height: 2px;
+	background-color: rgba(255, 255, 255, 0.4);
+	background-color: goldenrod;
+	background-color: $gold;
+}
+
+.video__bar,
+.video__soundBar {
+	height: 2px;
+	background-color: white;
+	background-color: $white;
+	width: 68px;
+	position: relative;
+}
+
+.video__bar:after,
+.video__soundBar:after{
+	content: '';
+	position: absolute;
+	right: -4px;
+	top: -3px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #fff;
+}
+		
+.video__time-total {
+	margin-right: 38px;
+}
+		
+.video__mute {
+  width: 30px;
+	height: 20px;
+	background: url(../img/sprite.png) no-repeat -9px -919px;
+  background-color: transparent;
+	border: none;
+  display:inline-block;
+  vertical-align:middle;
+	margin-right: 7px;
+	cursor: pointer;
+	
+	/* Обрезаем иконку громкости справа при нажатии */
+	padding: 0 12px 0 0;
+/*	background-clip: content-box;*/
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 2px transparent;
+  }
+
+  50% {
+    box-shadow: 0px 0px 10px white;
+  }
+
+  to {
+   	box-shadow: 0 0 2px transparent;
+  }
+}
+
+		
+.video__seek:hover .video__bar:after,
+.video__volume:hover .video__soundBar:after {
+  animation: pulse 1s infinite;
+}
+
+@media screen and (max-width: 500px) {
+  .video__time, .video__time-total {
+    display: none;
+  }
+}

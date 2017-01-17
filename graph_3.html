@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<style>
+		.highcharts-tooltip>span {
+    background: yellow;
+    border: 1px solid silver;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px #888;
+    padding: 8px;
+}
+	</style>
+</head>
+<body>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<div id="container" style="height: 400px"></div>
+
+<script>
+	$(function () {
+    $('#container').highcharts({
+        title: {
+            text: 'Full HTML tooltip with border, background and shadow'
+        },
+
+        tooltip: {
+            backgroundColor: null,
+            borderWidth: 0,
+            shadow: false,
+            useHTML: true,
+            style: {
+                padding: 0
+            }
+        },
+
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+
+        series: [{
+            data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+        }]
+    });
+});
+	</script>
+</body>
+</html>

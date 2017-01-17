@@ -1,0 +1,293 @@
+.artist {
+	float: left;
+	width: 440px;
+	height: 514px;
+	margin-bottom: $margin;
+	margin-right: $margin;
+	overflow: hidden;
+	box-shadow: $shadow_block;
+}
+
+
+.artist__left {
+	float: left;
+	width: 334px;
+	height: 100%;
+	box-shadow: 4px 0 10px rgba(0,0,0, 0.3);
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.artist__links {
+	float: right;
+	width: 106px;
+	height: 100%;
+	overflow: hidden;
+}
+
+$blur: 7px;
+$blur-height: 100px;
+
+.artist__foto {
+	height: 443px;
+//	background-image: url(../img/artist__foto.jpg);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
+//	z-index: 1;
+	background-position:bottom;
+	box-shadow:
+		0 5px 10px rgba(0,0,0, 0.4),
+		4px 0 10px rgba(0,0,0, 0.3);
+	position: relative;
+	z-index: 1;
+}
+
+
+//блок с блюром немного шире, чтобы убрать слабый блюр по краям. Левую, правую и нижнюю границу обрежет родитель. Верхнюю следующий псевдоэлемент.
+.artist__foto:before {
+	width: calc(100% + #{$blur*2});
+	height: $blur-height + $blur*2;
+	margin-left: -$blur;
+	bottom: -10px;
+	position: absolute;
+	content: "";
+	background-image: url(../img/artist__foto.jpg);
+	background-position: bottom;
+	filter: blur($blur);
+//	background-color: rgba(0, 0, 0, 1);
+//	filter: blur($blur) brightness(50%);
+	background-position:center bottom + " " +($blur);
+}
+
+//обрезает верхний край блока с блюром, делая чёткие границы, накладывая сверху фон
+.artist__foto:after {
+	position: absolute;
+	content: "";
+	top: 0;
+	bottom: $blur-height;
+	overflow: hidden;
+	width: 100%;
+	background-image: url(../img/artist__foto.jpg);
+	background-size: 100% auto;
+	background-position:left 0 bottom + " " +(-($blur-height));
+}
+
+.artist__blur {
+	box-sizing: border-box;
+	width: 100%;
+	height: $blur-height;
+	bottom: 0;
+	position: absolute;
+	padding-top: 15px + $blur;
+	padding-left: 25px;
+	background-color: rgba(0, 0, 0, 0.5);
+	
+}
+
+.artist__name {
+	font-size: 30px;
+	color: white;
+	font-weight: bold;
+	letter-spacing: -0.045em;
+	margin-bottom: 3px;
+	
+}
+
+.artist__title {
+	font-size: 12px;
+	color: $yellow;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.artist__footer {
+	min-height: 71px;
+}
+
+.artist__count {
+	width: 111px;
+	height: 71px;
+	float: left;
+	box-sizing: border-box;
+	background-color: $lightblue;
+	border-right: 1px solid darken($lightblue, 5%);
+	text-align: center;
+	color: $white;
+	font-weight: bold;
+	padding-top: 42px;
+	position: relative;
+	cursor: pointer;
+	
+	&:last-child {
+		border-right: none;
+		width: 112px;
+	}
+	
+	&:before {
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		content: '';
+		top: 10px;
+		left: 50%;
+		margin-left: -12px;
+		background: url(../img/sprite.png) no-repeat -10px -704px;
+	}
+}
+
+.artist__count_people:hover:before,
+.artist__count_people.artist__count_active:before {
+	background-position: -10px -729px
+}
+
+.artist__count_like:before {
+	background-position: -10px -774px;
+}
+
+.artist__count_like:hover:before,
+.artist__count_like.artist__count_active:before {
+	background-position: -10px -799px
+}
+
+.artist__count_comment:before {
+	background-position: -10px -844px;
+}
+
+.artist__count_comment:hover:before,
+.artist__count_comment.artist__count_active:before {
+	background-position: -10px -869px;
+}
+
+.artist__link {
+	box-sizing: border-box;
+//	display: block;
+	width: 100%;
+	color: white;
+	height: 129px;
+//	border-bottom: 1px solid #e08b84;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+	font-family: sans-serif;
+	position: relative;
+	font-size: 16px;
+	@include bg_white;
+	outline: none;
+	border: none;
+	text-align: center;
+	padding-top: 45px;
+	position: relative;
+}
+
+.artist__link:before {
+	content: '';
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 50%;
+	top: 25px;
+	margin-left: -25px;
+	background: url(../img/sprite.png) no-repeat -10px -153px;
+}
+
+.artist__link_photos:hover:before,
+.artist__link_photos.artist__link_selected:before {
+	background-position: -10px -203px;
+}
+
+.artist__link_profile  {
+	&:before {
+		background-position: -10px -513px;
+	}
+	
+	&:hover:before,
+	&.artist__link_selected:before {
+		background-position: -10px -563px;
+	}
+}
+
+.artist__link_music {
+	&:before {
+		background-position: -10px -273px;
+	}
+	&:hover:before,
+	&.artist__link_selected:before {
+		background-position: -10px -323px;
+	}
+	
+}
+
+.artist__link_comments {
+	&:before {
+		background-position: -10px -393px;
+	}
+	
+	&:hover:before,
+	&.artist__link_selected:before {
+		background-position: -10px -443px;
+	}
+}
+
+
+
+
+
+.artist__link_selected {
+	background-color: rgba(150, 150, 150, 0.1);
+	box-shadow: 
+		inset -1px -2px 0 -1px rgba(0,0,0, 0.1),
+		inset -1px 2px rgba(0,0,0, 0.1);
+	&:before {
+//		background-position: 0 -50px;
+	}
+	
+	&:hover {
+	background-color: rgba(150, 150, 150, 0.1);
+		
+	}
+}
+
+.artist__link:hover:before {
+//		background-position: 0 -50px;
+}
+
+.artist__social-block {
+	height: 33px;
+	position: relative;
+	top: 15px;
+	text-align: right;
+	font-size: 0;
+	padding-right: 20px;
+}
+
+.artist__social {
+	display: inline-block;
+	vertical-align: top;
+	width: 33px;
+	height: 33px;
+	box-sizing: border-box;
+	border: 2px solid white;
+	border-radius: 50%;
+	z-index: 1;
+	position: relative;
+	margin-left: 5px;
+	cursor: pointer;
+	background: url(../img/sprite.png) no-repeat -5px -625px;
+}
+
+.artist__social_twitter {
+	
+	
+	&:hover {
+		background-color: #2FADFA;
+	}
+}
+
+.artist__social_facebook {
+	background-position: 0px -661px;
+	
+	&:hover {
+		background-color: #3A56A0;
+	}
+}

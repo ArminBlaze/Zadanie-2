@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+	<meta charset='UTF-8'>
+	<title>Music Site</title>
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+	
+		<!-- styles needed by jScrollPane -->
+<link type="text/css" href="style/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+
+
+<!--Стили страницы-->
+<link rel='stylesheet' href='css/style.css'>
+
+<!-- latest jQuery direct from google's CDN -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+
+<!-- the mousewheel plugin - optional to provide mousewheel support -->
+<script type="text/javascript" src="script/jquery.mousewheel.js"></script>
+
+<!-- the jScrollPane script -->
+<script type="text/javascript" src="script/jquery.jscrollpane.min.js"></script>
+
+<script type="text/javascript" id="sourcecode">
+	$(function()
+	{
+		$('.scroll-pane').jScrollPane();
+	});
+</script>
+</head>
+<body>
+
+
+<!--CONTAINER-->
+	<div class='container'>
+	
+<!--	POPULAR-->
+		<div class='popular'>
+			<div class='popular__artist'>
+				<h2 class='popular__header'>Popular</h2>
+				<div class='popular__title'>Artists of the week</div>
+				<p class='popular__description'>Praesent magna nunc, tincidunt pretium consequat dapibus, mollis nec odio. Nunc feugiat molestie orci, eu rutrum velit dignissim.</p>
+					<a class='popular__read-more' href="#">Read more</a>
+				<div class='popular__icons'>
+					<div class='popular__icon popular__icon_refresh'></div>
+					<div class='popular__icon popular__icon_like'></div>
+					<div class='popular__icon popular__icon_comment'></div>
+				</div>
+			</div>
+			<div class='popular__foto'></div>
+			<div class='popular__scroll scroll-pane'>
+				<ul class='popular__list'>
+					<li class='popular__item'>Lil Wayne</li>
+					<li class='popular__item'>Bruno Mars</li>
+					<li class='popular__item'>Niki Minaj</li>
+					<li class='popular__item'>Selena Gomez</li>
+					<li class='popular__item'>Tim McGraw</li>
+					<li class='popular__item popular__item_selected'>Taylor Swift</li>
+					<li class='popular__item'>Robin Thicke</li>
+					<li class='popular__item'>Maroon 5</li>
+					<li class='popular__item'>Jay-Z</li>
+					<li class='popular__item'>Rhianna</li>
+					<li class='popular__item'>The Killers</li>
+					<li class='popular__item'>Eminem</li>
+					<li class='popular__item'>Gorillaz</li>
+					<li class='popular__item'>Prodigy</li>
+					<li class='popular__item'>Scooter</li>
+					<li class='popular__item'>Britney Spears</li>
+					<li class='popular__item'>Limp Bizkit</li>
+					<li class='popular__item'>Bloodhoung Gang</li>
+					<li class='popular__item'>Alien Ant Farm</li>
+					<li class='popular__item'>Passenger</li>
+					<li class='popular__item'>Mogwai</li>
+					<li class='popular__item'>Madonna</li>
+					<li class='popular__item'>Coldplay</li>
+					<li class='popular__item'>Fallout boy</li>
+					<li class='popular__item'>Lacuna Coil</li>
+					<li class='popular__item'>Dalida</li>
+					<li class='popular__item'>Beasty Boys</li>
+					<li class='popular__item'>U2</li>
+					<li class='popular__item'>Muse</li>
+					<li class='popular__item'>Armin Van Buurren</li>
+				</ul>
+			</div>
+		</div>
+<!--		END OF POPULAR-->
+
+<!--	CALENDAR-->
+		<div class='calendar'>
+			<div class='calendar__logo'>
+				Calendar
+			</div>
+			<div class='calendar__slider'>
+				<div class='calendar__control calendar__control_left'>
+				</div>
+				<div class='calendar__slider-content'>
+					<div class='calendar__slider-move'>
+						<div class='calendar__artist-block'>
+							<div class='calendar__artist'>
+								<h2 class='calendar__header'>Robin Thicke</h2>
+								<div class='calendar__date'>november 3rd</div>
+								<div class='calendar__rating'>
+								<input id="star1-4" type="radio" name="reviewStars1"/>
+								<label title="gorgeous" for="star1-4"></label>
+
+								<input id="star1-3" type="radio" name="reviewStars1"/>
+								<label title="good" for="star1-3"></label>
+
+								<input id="star1-2" type="radio" name="reviewStars1"/>
+								<label title="regular" for="star1-2"></label>
+
+								<input id="star1-1" type="radio" name="reviewStars1"/>
+								<label title="poor" for="star1-1"></label>
+
+								<input id="star1-0" type="radio" name="reviewStars1"/>
+								<label title="bad" for="star1-0"></label>
+								</div>
+							</div>
+							<img src='img/calendar__artist1.jpg' alt='Robin Thicke'>
+							<div class='calendar__foto'>
+								<a class='calendar__details' href="#">Details</a>
+								<div class='calendar__add'>Add to list</div>
+							</div>
+						</div>
+						<div class='calendar__artist-block'>
+							<div class='calendar__artist'>
+								<div class='calendar__header'>Kyle Minouge</div>
+								<div class='calendar__date'>january 25th</div>
+								<div class='calendar__rating'>
+								<input id="star2-4" type="radio" name="reviewStars2"/>
+								<label title="gorgeous" for="star2-4"></label>
+
+								<input id="star2-3" type="radio" name="reviewStars2"/>
+								<label title="good" for="star2-3"></label>
+
+								<input id="star2-2" type="radio" name="reviewStars2"/>
+								<label title="regular" for="star2-2"></label>
+
+								<input id="star2-1" type="radio" name="reviewStars2"/>
+								<label title="poor" for="star2-1"></label>
+
+								<input id="star2-0" type="radio" name="reviewStars2"/>
+								<label title="bad" for="star2-0"></label>
+						</div>
+							</div>
+							<div class='calendar__foto'>
+								<a class='calendar__details' href="#">Details</a>
+								<div class='calendar__add'>Add to list</div>
+							</div>
+								<img src='img/calendar__artist2.jpg' alt='Kyle Minogue'>
+						</div>
+						<div class='calendar__artist-block'>
+								<img src='img/calendar__artist3.jpg' alt='Kyle Minogue'>
+							<div class='calendar__artist'>
+								<div class='calendar__header'>Selena Gomez</div>
+								<div class='calendar__date'>March 18th</div>
+								<div class='calendar__rating'>
+								<input id="star3-4" type="radio" name="reviewStars3"/>
+								<label title="gorgeous" for="star3-4"></label>
+
+								<input id="star3-3" type="radio" name="reviewStars3"/>
+								<label title="good" for="star3-3"></label>
+
+								<input id="star3-2" type="radio" name="reviewStars3"/>
+								<label title="regular" for="star3-2"></label>
+
+								<input id="star3-1" type="radio" name="reviewStars3"/>
+								<label title="poor" for="star3-1"></label>
+
+								<input id="star3-0" type="radio" name="reviewStars3"/>
+								<label title="bad" for="star3-0"></label>
+								</div>
+							</div>
+							<div class='calendar__foto'>
+								<a class='calendar__details' href="#">Details</a>
+								<div class='calendar__add'>Add to list</div>
+							</div>
+						</div>
+						<div class='calendar__artist-block'>
+							<div class='calendar__artist'>
+								<div class='calendar__header'>Madonna</div>
+								<div class='calendar__date'>december 20</div>
+								<div class='calendar__rating'><input id="star4-4" type="radio" name="reviewStars4"/>
+								<label title="gorgeous" for="star4-4"></label>
+
+								<input id="star4-3" type="radio" name="reviewStars4"/>
+								<label title="good" for="star4-3"></label>
+
+								<input id="star4-2" type="radio" name="reviewStars4"/>
+								<label title="regular" for="star4-2"></label>
+
+								<input id="star4-1" type="radio" name="reviewStars4"/>
+								<label title="poor" for="star4-1"></label>
+
+								<input id="star4-0" type="radio" name="reviewStars4"/>
+								<label title="bad" for="star4-0"></label>
+							</div>
+							</div>
+							<div class='calendar__foto'>
+								<a class='calendar__details' href="#">Details</a>
+								<div class='calendar__add'>Add to list</div>
+							</div>
+						</div>
+						<div class='calendar__artist-block'>
+							<div class='calendar__artist'>
+								<div class='calendar__header'>Scooter</div>
+								<div class='calendar__date'>30 febuary</div>
+								<div class='calendar__rating'>
+								<input id="star5-4" type="radio" name="reviewStars5"/>
+								<label title="gorgeous" for="star5-4"></label>
+
+								<input id="star5-3" type="radio" name="reviewStars5"/>
+								<label title="good" for="star5-3"></label>
+
+								<input id="star5-2" type="radio" name="reviewStars5"/>
+								<label title="regular" for="star5-2"></label>
+
+								<input id="star5-1" type="radio" name="reviewStars5"/>
+								<label title="poor" for="star5-1"></label>
+
+								<input id="star5-0" type="radio" name="reviewStars5"/>
+								<label title="bad" for="star5-0"></label>
+								</div>
+							</div>
+							<div class='calendar__foto'>
+								<a class='calendar__details' href="#">Details</a>
+								<div class='calendar__add'>Add to list</div>
+							</div>
+						</div>
+						<div class='calendar__artist-block'>
+							<div class='calendar__artist'>
+								<div class='calendar__header'>Maroon 5</div>
+								<div class='calendar__date'>1 april</div>
+								<div class='calendar__rating'>
+									<input id="star6-4" type="radio" name="reviewStars6"/>
+									<label title="gorgeous" for="star6-4"></label>
+
+									<input id="star6-3" type="radio" name="reviewStars6"/>
+									<label title="good" for="star6-3"></label>
+
+									<input id="star6-2" type="radio" name="reviewStars6"/>
+									<label title="regular" for="star6-2"></label>
+
+									<input id="star6-1" type="radio" name="reviewStars6"/>
+									<label title="poor" for="star6-1"></label>
+
+									<input id="star6-0" type="radio" name="reviewStars6"/>
+									<label title="bad" for="star6-0"></label>
+								</div>
+							</div>
+							<div class='calendar__foto'>
+								<a class='calendar__details' href="#">Details</a>
+								<div class='calendar__add'>Add to list</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='calendar__control calendar__control_right'>
+				</div>
+			</div>
+		</div>
+<!--		END OF CALENDAR-->
+
+
+<!--	ARTIST-->
+		<div class='artist'>
+			<div class='artist__left'>
+				<div class='artist__foto'>
+					<div class='artist__blur'>
+						<div class='artist__name'	
+						>Anna Maria Jopek</div>
+						<div class='artist__title'>Artist profile</div>
+					</div>
+					<div class='artist__social-block'>
+						<a class='artist__social artist__social_twitter' href="#"></a>
+						<a class='artist__social artist__social_facebook' href="#"></a>
+					</div>
+				</div>
+				<div class='artist__footer'>
+					<div class='artist__count artist__count_people'>7 034</div>
+					<div class='artist__count artist__count_like artist__count_active'>12 980</div>
+					<div class='artist__count artist__count_comment'>9 156</div>
+				</div>
+			</div>
+			<div class='artist__links'>
+				<button class='artist__link artist__link_photos'>Photos</button>
+				<button class='artist__link artist__link_profile artist__link_selected'>Profile</button>
+				<button class='artist__link artist__link_music'>Music</button>
+				<button class='artist__link artist__link_comments'>Comments</button>
+			</div>
+		</div>
+<!--		END OF ARTIST-->
+	
+<!--	BUY-->
+		<div class='buy'>
+			<div class='buy__description'>
+				<div class='buy__header'>Full acc</div>
+				<div class='buy__title'>For music lovers</div>
+				<ul class='buy__list'>
+					<li class='buy__item'><strong>50 000</strong> songs</li>
+					<li class='buy__item'>All profiles</li>
+					<li class='buy__item'>Exclusive stories</li>
+					<li class='buy__item'>Hot news</li>
+				</ul>
+			</div>
+			<div class='buy__price-block'>
+				<div class='buy__price'>$<span class='buy_number'>9</span></div>
+				<div class='buy__month'>Per Month</div>
+			</div>
+			<button class='buy__button'>Buy!</button>
+		</div>
+<!--		END OF BUY-->
+	
+<!--	CHART-->
+		<div class='chart-block'>
+			<div class='player'>
+				<div class='player__left'>
+					<div class='player__pause'></div>
+					<div class='player__time'>0:23</div>
+				</div>
+				<div class='player__right'>
+					<div class='player__song'>Picasso Baby</div>
+					<div class='player__title'>jay-z</div>
+					<div class='player__controls'>
+						<div class='player__mute'></div>
+						<div class='player__volume'>
+							<div class="player__scale">
+								<div class="player__bar"></div>
+							</div>
+						</div>
+						<div class='player__options'></div>
+					</div>
+				</div>
+			</div>
+			<div class='chart'>
+				<div class='chart__graph-block'>
+					<div class='chart__graph'>
+						<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+					</div>
+					<div class='chart__balloon'></div>
+					<div class='chart__title'>Chart positions</div>
+					<div class='chart__year'>2013</div>
+					<svg class="hide">
+						<defs>
+							<pattern id="img1" patternUnits="userSpaceOnUse" width="398" height="236">
+								<image xlink:href="img/chart__graph.png" x="0" y="0" width="398" height="236" />
+							</pattern>
+						</defs>
+	</svg>
+				</div>
+				<div class='chart__artist-block'>
+					<div class="chart__arrow-block">
+						<div class='chart__arrow chart__arrow_up'></div>
+						<div class='chart__arrow chart__arrow_down'></div>
+					</div>
+					<div class='chart__artist'>Passenger</div>
+					<div class='chart__place'>
+						<span class="chart__number">4</span>th
+						<span class='chart__position'>Top<br>Position</span>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+<!--		END OF CHART-->
+	
+<!--	TOP-->
+		<div class='top'>
+			<div class='top__numbers'>
+				<div class='top__number'>1</div>
+				<div class='top__number'>2</div>
+				<div class='top__number'>3</div>
+			</div>
+			<div class='top__artist-block'>
+				<div class='top__artist-card'>
+					<div class='top__title'>She Wolf</div>
+					<div class='top__name'>Shakira</div>
+					<div class='top__like'>593</div>
+				</div>
+				<div class='top__artist-card top__artist-card_2'>
+					<div class='top__title'>Wide Awake</div>
+					<div class='top__name'>Katy Perry</div>
+					<div class='top__like'>412</div>
+				</div>
+				<div class='top__artist-card top__artist-card_3'>
+					<div class='top__title'>Bullet proof</div>
+					<div class='top__name'>Bruno Mars</div>
+					<div class='top__like'>360</div>
+				</div>
+			</div>
+			<div class='top__footer'>
+				<button class='top__button top__button_videos top__button_active'>Videos</button>
+				<button class='top__button top__button_music'>Music</button>
+			</div>
+		</div>
+<!--	END OF TOP-->
+	
+<!--	VIDEO-->
+		<div class="video">
+		<video class="my_video" poster="img/woman_3.jpg" width="626" height="395" >
+    <source src="video/mikethefrog.mp4"
+    type="video/mp4" />
+    <source src="video/mikethefrog.webm"
+    type="video/webm" />
+    <source src="video/mikethefrog.ogv"
+    type="video/ogg" />
+    <p>Please update your browser to watch this video</p>
+     </video>
+<!-- Video Controls -->
+<div class="video__controls">
+    <button class="video__pause"></button>
+   
+    <span class="video__time">00:00</span>
+    <div class="video__seek">
+			<div class="video__scale">
+				<div class="video__bar"></div>
+			</div>
+		</div>
+    <span class="video__time-total">00:00</span>
+    <button class="video__mute"></button>
+    <div class="video__volume">
+			<div class="video__soundScale">
+				<div class="video__soundBar"></div>
+			</div>
+		</div>
+<!--    <button class="fullscreenbtn"></button>-->
+  </div>
+</div>
+<!--	END OF VIDEO-->
+		
+	</div>
+<!--	END OF CONTAINER-->
+
+<script>
+	
+	//VIDEO PLAYER SCRIPT
+	
+	var vid, video__pause, video__seek, video__bar, video__time, video__timeTotal, video__mute, video__volume, video__soundBar, fullscreenbtn;
+	
+	function intializePlayer(){
+	
+	// Set object references
+	
+	vid = document.querySelector(".my_video");
+	video__pause = document.querySelector(".video__pause");
+	video__seek = document.querySelector(".video__seek");
+	video__bar = document.querySelector(".video__bar");
+	video__time = document.querySelector(".video__time");
+	video__timeTotal = document.querySelector(".video__time-total");
+	video__mute = document.querySelector(".video__mute");
+	video__volume = document.querySelector(".video__volume");
+	video__soundBar = document.querySelector(".video__soundBar");
+	fullscreenbtn = document.querySelector(".fullscreenbtn");
+	
+	// Add event listeners
+	video__pause.addEventListener("click",playPause,false);
+	
+	vid.addEventListener("click",playPause,false);
+//	vid.addEventListener("dblclick", toggleFullScreen);
+	vid.addEventListener("timeupdate",seektimeupdate,false);
+	video__mute.addEventListener("click",vidmute,false);
+//fullscreenbtn.addEventListener("click",toggleFullScreen,false);	
+	
+
+	var timeDrag = false; /* Drag status */
+	video__seek.addEventListener( "mousedown" , function(e) {
+		timeDrag = true;
+		updatebar(e.pageX);
+	});
+		document.addEventListener( "mouseup" , function(e) {
+		if(timeDrag) {
+			timeDrag = false;
+			updatebar(e.pageX);
+		}
+	});
+		document.addEventListener( "mousemove" , function(e) {
+		if(timeDrag) {
+			updatebar(e.pageX);
+		}
+	});
+	
+	var volumeDrag = false;
+	video__volume.addEventListener( "mousedown" , function(e) {
+		volumeDrag = true;
+		updateSound(e.pageX);
+	});
+		document.addEventListener( "mouseup" , function(e) {
+		if(volumeDrag) {
+			volumeDrag = false;
+			updateSound(e.pageX);
+		}
+	});
+		document.addEventListener( "mousemove" , function(e) {
+		if(volumeDrag) {
+			updateSound(e.pageX);
+		}
+	});
+	
+}
+window.onload = intializePlayer;
+function playPause(){
+	if(vid.paused){
+		vid.play();
+		video__pause.style.backgroundImage = "url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMThweCIgaGVpZ2h0PSIxOHB4IiB2aWV3Qm94PSIwIDAgMTggMTgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE4IDE4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik03LjAxMSwxNi4yODVjMCwwLjY3Mi0wLjYxMiwxLjIxNS0xLjM2NiwxLjIxNUg0LjIyM2MtMC43NTQsMC0xLjM2NS0wLjU0My0xLjM2NS0xLjIxNVYxLjcxNA0KCQljMC0wLjY3LDAuNjExLTEuMjE0LDEuMzY1LTEuMjE0aDEuNDIyYzAuNzU0LDAsMS4zNjYsMC41NDQsMS4zNjYsMS4yMTRWMTYuMjg1eiIvPg0KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNS4xNDIsMTYuMjg1YzAsMC42NzItMC41ODYsMS4yMTUtMS4zMDgsMS4yMTVoLTEuMzYzYy0wLjcyMywwLTEuMzA4LTAuNTQzLTEuMzA4LTEuMjE1VjEuNzE0DQoJCWMwLTAuNjcsMC41ODUtMS4yMTQsMS4zMDgtMS4yMTRoMS4zNjNjMC43MjIsMCwxLjMwOCwwLjU0NCwxLjMwOCwxLjIxNFYxNi4yODV6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==)";
+		video__pause.style.backgroundSize="20px";
+	} else {
+		vid.pause();
+		video__pause.style.backgroundImage = "url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMThweCIgaGVpZ2h0PSIxOHB4IiB2aWV3Qm94PSI5MSA5MSAxOCAxOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyA5MSA5MSAxOCAxOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBvcGFjaXR5PSIwLjk1IiBmaWxsPSIjRkZGRkZGIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICIgZD0iTTkzLjI1OCw5MS4yMzlsMTQuNjkyLDcuNjgxYzEuMTQxLDAuNTk2LDEuMTQxLDEuNTYzLDAsMi4xNTkNCgkJbC0xNC42OTIsNy42ODNjLTEuMTQsMC41OTctMi4wNjQsMC4wMzctMi4wNjQtMS4yNDhWOTIuNDg3QzkxLjE5NCw5MS4yMDIsOTIuMTE4LDkwLjY0Myw5My4yNTgsOTEuMjM5eiIvPg0KPC9nPg0KPC9zdmc+DQo=)";
+		video__pause.style.backgroundSize="20px";
+	}
+}
+	
+
+var updatebar = function(x) {
+	var progress = video__seek;
+	var maxduration = vid.duration;
+	var position = x - progress.getBoundingClientRect().left;
+	var percentage = 100 * position / progress.offsetWidth;
+	
+	if(percentage > 100) {
+		percentage = 100;
+	}
+	if(percentage < 0) {
+		percentage = 0;
+	}
+	
+//	Update progress bar and video currenttime
+	video__bar.style.width = percentage + "%";
+	vid.currentTime = maxduration * percentage / 100;
+	
+};
+
+var updateSound = function(x) {
+	var progress = video__volume;
+//	var maxduration = vid.duration;
+	var position = x - progress.getBoundingClientRect().left;
+	var percentage = 100 * position / progress.offsetWidth;
+	
+	if(percentage > 100) {
+		percentage = 100;
+	}
+	if(percentage < 0) {
+		percentage = 0;
+		//Изменить иконку
+	}
+	
+//	Update progress bar and video currenttime
+	video__soundBar.style.width = percentage + "%";
+	vid.volume = percentage / 100;
+
+	
+};
+	
+function seektimeupdate(){
+	var currentPos = vid.currentTime;
+	var maxduration = vid.duration;
+	var percentage = 100 * currentPos / maxduration;
+	video__bar.style.width=percentage+"%";
+	
+	var curmins = Math.floor(vid.currentTime / 60);
+	var cursecs = Math.floor(vid.currentTime - curmins * 60);
+	var durmins = Math.floor(vid.duration / 60);
+	var dursecs = Math.floor(vid.duration - durmins * 60);
+	if(cursecs < 10){ cursecs = "0"+cursecs; }
+	if(dursecs < 10){ dursecs = "0"+dursecs; }
+	if(curmins < 10){ curmins = "0"+curmins; }
+	if(durmins < 10){ durmins = "0"+durmins; }
+	video__time.innerHTML = curmins+":"+cursecs;
+	video__timeTotal.innerHTML = durmins+":"+dursecs;
+}
+function vidmute(){
+	if(vid.muted){
+		vid.muted = false;
+		video__mute.style.backgroundClip="border-box";
+	} else {
+		vid.muted = true;
+		video__mute.style.backgroundClip="content-box";
+	}
+}
+function setvolume(){
+	vid.volume = video__volume.value / 100;
+}
+function toggleFullScreen(){
+	if(vid.requestFullScreen){
+		vid.requestFullScreen();
+	} else if(vid.webkitRequestFullScreen){
+		vid.webkitRequestFullScreen();
+	} else if(vid.mozRequestFullScreen){
+		vid.mozRequestFullScreen();
+	}
+}
+	
+	//END OF VIDEO PLAYER SCRIPT
+</script>
+
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+<script src="jquery-circle-progress/dist/circle-progress.js"></script>
+
+<script>
+	$('.player__left').circleProgress({
+    value: 0.27,
+		startAngle: -Math.PI / -2,
+		size: 171,
+		thickness: 17,
+		emptyFill:"rgba(255, 255, 255, 0.2)",
+		fill: {
+			//opacity of image must be same as emtyFill
+            image: "img/player.png"
+        }
+});
+</script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script>
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'areaspline',
+						width: 398,
+						height: 237,
+						backgroundColor: 'rgba(255, 255, 255, .1)',
+            borderWidth: 0,
+            plotBackgroundColor: 'rgba(255, 255, 255, .0)',
+//            plotShadow: true,
+            plotBorderWidth: 0,
+						spacingBottom: 0,
+						spacingTop: 0,
+						spacingLeft: 0,
+						spacingRight: 0,
+						margin: 0,
+//						plotBackgroundColor: 'red'
+        },
+        title: {
+            text: null
+        },
+				tooltip: {
+            backgroundColor: null,
+            borderWidth: 0,
+            shadow: false,
+            useHTML: true,
+            style: {
+                padding: 0,
+//								color: 'white',
+            },
+            shared: true,
+//            valueSuffix: ' units'
+					formatter: function () {
+                return '<b>' + this.y + '</b>';
+            }
+        },
+        legend: 
+			{
+						enabled: false,
+            
+        }
+			,
+        xAxis: {
+					minPadding: 0,
+          maxPadding: 0,
+					gridLineWidth: 0,
+					lineWidth: 0,
+					tickLength: 0,
+					labels: {
+                enabled: false,
+            },
+					
+        },
+        yAxis: {
+						gridLineWidth: 0,
+            title: {
+                text: null
+            },
+						labels: {
+									enabled: false
+						},
+        },
+        
+        credits: {
+            enabled: false
+        },
+        plotOptions: {
+            areaspline: {
+                fillOpacity: 1
+            },
+						series: {
+                lineWidth: 4,
+								marker: {
+                    enabled: false
+                }
+            }
+        },
+				 exporting: {
+            enabled: false
+        },
+        series: [{
+            name: 'John',
+            data: [25, 10, 50, 35, 65, 20, 35, 40, 55],
+						color: 'white',
+						pointStart: 0,
+						pointInterval: 1,
+        }]
+    });
+});
+		</script>
+</body>
+</html>

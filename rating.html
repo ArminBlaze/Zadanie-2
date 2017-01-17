@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rating</title>
+	
+	<style>
+		/*sprite with stars*/
+.calendar__rating input:checked ~ label, .calendar__rating label, .calendar__rating label:hover, .calendar__rating label:hover ~ label {
+  background: url('img/calendar__rating2.svg') no-repeat;
+	background-size: 100%;
+}
+
+.calendar__rating {
+  
+  /*fix floating problems*/
+  overflow: hidden;
+  *zoom: 1;
+  /*end of fix floating problems*/
+  
+  position: relative;
+  float: left;
+}
+
+.calendar__rating input {
+  display: none;
+  
+  width: 43px;
+  height: 40px;
+  
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+		
+.calendar__rating label:hover, .calendar__rating label:hover ~ label {
+  background-position: 0 100%;
+  height: 40px;
+  width: 43px;
+}
+
+.calendar__rating input:checked ~ label {
+  background-position: 0 100%;
+  height: 40px;
+  width: 43px;
+}
+
+.calendar__rating label {
+  background-position: 0 0;
+  height: 40px;
+  width: 43px;
+  float: right;
+  cursor: pointer;
+  margin-right: 10px;
+  
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.calendar__rating #star-0 {
+  left: 0px;
+}
+.calendar__rating #star-1 {
+  left: 53px;
+}
+.calendar__rating #star-2 {
+  left: 106px;
+}
+.calendar__rating #star-3 {
+  left: 159px;
+}
+.calendar__rating #star-4 {
+  left: 212px;
+}
+.calendar__rating #star-5 {
+  left: 265px;
+}
+	
+	</style>
+</head>
+<body>
+	<h1>Rating stars with CSS (all new browsers and IE 8+)</h1>
+
+<div class="calendar__rating">
+	<input id="star-4" type="radio" name="reviewStars"/>
+	<label title="gorgeous" for="star-4"></label>
+
+	<input id="star-3" type="radio" name="reviewStars"/>
+	<label title="good" for="star-3"></label>
+
+	<input id="star-2" type="radio" name="reviewStars"/>
+	<label title="regular" for="star-2"></label>
+
+	<input id="star-1" type="radio" name="reviewStars"/>
+	<label title="poor" for="star-1"></label>
+
+	<input id="star-0" type="radio" name="reviewStars"/>
+	<label title="bad" for="star-0"></label>
+</div>
+</body>
+</html>

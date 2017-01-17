@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highcharts Example</title>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css">
+		
+			body {
+				background-color: palevioletred;
+			}	
+			
+			.hide {
+				width: 0;
+				height: 0;
+/*				display: none;*/
+			}
+
+			.highcharts-series :first-child {
+				fill: url(#img1) !important;
+			}
+			
+			
+/*			Стиль для шарика на графике*/
+			.highcharts-tooltip > span {
+				margin-top: 5px !important;
+				padding-top: 6px;
+				width: 56px;
+				height: 71px;
+				box-sizing: border-box;
+				position: relative;
+    		background: url(img/chart__tooltip.png) 0 0 no-repeat;
+				text-align: center;
+}
+/*			Цифра рейтинга*/
+			.highcharts-tooltip b{
+				color: white;
+				font-size: 22px;
+			}
+	
+
+		</style>
+
+	</head>
+	<body>
+	<svg class="hide">
+		<defs>
+  <pattern id="img1" patternUnits="userSpaceOnUse" width="398" height="236">
+    <image xlink:href="../img/chart__graph.png" x="0" y="0" width="398" height="236" />
+  </pattern>
+</defs>
+	</svg>
+	
+
+	
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<!--<script src="https://code.highcharts.com/modules/exporting.js"></script>-->
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+		<script>
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'areaspline',
+						width: 398,
+						height: 237,
+						backgroundColor: 'rgba(255, 255, 255, .1)',
+            borderWidth: 0,
+            plotBackgroundColor: 'rgba(255, 255, 255, .0)',
+//            plotShadow: true,
+            plotBorderWidth: 0,
+						spacingBottom: 0,
+						spacingTop: 0,
+						spacingLeft: 0,
+						spacingRight: 0,
+						margin: 0,
+//						plotBackgroundColor: 'red'
+        },
+        title: {
+            text: null
+        },
+				tooltip: {
+            backgroundColor: null,
+            borderWidth: 0,
+            shadow: false,
+            useHTML: true,
+            style: {
+                padding: 0,
+//								color: 'white',
+            },
+            shared: true,
+//            valueSuffix: ' units'
+					formatter: function () {
+                return '<b>' + this.y + '</b>';
+            }
+        },
+        legend: 
+			{
+						enabled: false,
+            
+        }
+			,
+        xAxis: {
+					minPadding: 0,
+          maxPadding: 0,
+					gridLineWidth: 0,
+					lineWidth: 0,
+					tickLength: 0,
+					labels: {
+                enabled: false,
+            },
+					
+        },
+        yAxis: {
+						gridLineWidth: 0,
+            title: {
+                text: null
+            },
+						labels: {
+									enabled: false
+						},
+        },
+        
+        credits: {
+            enabled: false
+        },
+        plotOptions: {
+            areaspline: {
+                fillOpacity: 1
+            },
+						series: {
+                lineWidth: 4,
+								marker: {
+                    enabled: false
+                }
+            }
+        },
+				 exporting: {
+            enabled: false
+        },
+        series: [{
+            name: 'John',
+            data: [25, 10, 50, 35, 65, 20, 35, 40, 55],
+						color: 'white',
+						pointStart: 0,
+						pointInterval: 1,
+        }]
+    });
+});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,137 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-1_0_popular__read-more {
+    width: 21px;
+    height: 21px;
+    background-position: -10px -10px;
+}
+
+.sprite-1_1_popular__comment {
+    width: 15px;
+    height: 14px;
+    background-position: -10px -51px;
+}
+
+.sprite-1_1_popular__like {
+    width: 16px;
+    height: 14px;
+    background-position: -10px -85px;
+}
+
+.sprite-1_1_popular__refresh {
+    width: 20px;
+    height: 14px;
+    background-position: -10px -119px;
+}
+
+.sprite-2_1_artist__link_photos2 {
+    width: 50px;
+    height: 100px;
+    background-position: -10px -153px;
+}
+
+.sprite-2_3_artist__link_music2 {
+    width: 50px;
+    height: 100px;
+    background-position: -10px -273px;
+}
+
+.sprite-2_4_artist__link_comments2 {
+    width: 50px;
+    height: 100px;
+    background-position: -10px -393px;
+}
+
+.sprite-2__2_artist__link_profile2 {
+    width: 50px;
+    height: 100px;
+    background-position: -10px -513px;
+}
+
+.sprite-3_1_artist__social_twitter {
+    width: 17px;
+    height: 14px;
+    background-position: -10px -633px;
+}
+
+.sprite-3_2_artist__social_facebook {
+    width: 10px;
+    height: 17px;
+    background-position: -10px -667px;
+}
+
+.sprite-3_3_artist__count_people {
+    width: 25px;
+    height: 50px;
+    background-position: -10px -704px;
+}
+
+.sprite-3_4_artist__count_like {
+    width: 25px;
+    height: 50px;
+    background-position: -10px -774px;
+}
+
+.sprite-3_5_artist__count_comment {
+    width: 25px;
+    height: 50px;
+    background-position: -10px -844px;
+}
+
+.sprite-4_1_player__mute {
+    width: 30px;
+    height: 30px;
+    background-position: -10px -914px;
+}
+
+.sprite-4_2_player__options {
+    width: 28px;
+    height: 30px;
+    background-position: -10px -964px;
+}
+
+.sprite-4_4chart__tooltip {
+    width: 54px;
+    height: 71px;
+    background-position: -10px -1014px;
+}
+
+.sprite-calendar__details {
+    width: 23px;
+    height: 23px;
+    background-position: -10px -1105px;
+}
+
+.sprite-chart__arrow_down {
+    width: 22px;
+    height: 15px;
+    background-position: -10px -1148px;
+}
+
+.sprite-chart__arrow_up {
+    width: 21px;
+    height: 13px;
+    background-position: -10px -1183px;
+}
+
+.sprite-top__button_music {
+    width: 22px;
+    height: 48px;
+    background-position: -10px -1216px;
+}
+
+.sprite-top__button_videos {
+    width: 25px;
+    height: 50px;
+    background-position: -10px -1284px;
+}
+
+.sprite-top__like {
+    width: 23px;
+    height: 45px;
+    background-position: -10px -1354px;
+}
